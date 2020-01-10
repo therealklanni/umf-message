@@ -2,7 +2,7 @@
 import mockDate from 'mockdate'
 import uuid from 'uuid/v4'
 
-import UMFMessage, { UMFMessageMinimal, UMFMessageShort } from '../'
+import UMFMessage, { UMFMessageMinimal, UMFMessageLong } from '../'
 
 jest.mock('uuid/v4', () => jest.fn(() => '2335eac5-a27e-447e-baca-1050a7e726af'))
 
@@ -11,29 +11,29 @@ const mid = uuid()
 describe('class UMFMessage', () => {
   const slimMessage: UMFMessageMinimal = {
     to: 'service',
-    frm: 'client',
-    bdy: {}
+    from: 'client',
+    body: {}
   }
   const now = Date.now()
 
   mockDate.set(now)
 
   const isoDate = new Date().toISOString()
-  const fatMessage: UMFMessageShort = {
+  const fatMessage: UMFMessageLong = {
     ...slimMessage,
     mid,
-    ver: 'UMF/1.4.6',
-    ts: isoDate,
-    rmi: mid,
-    fwd: 'client',
-    typ: 'any',
-    pri: '1',
+    version: 'UMF/1.4.6',
+    timestamp: isoDate,
+    rmid: mid,
+    forward: 'client',
+    type: 'any',
+    priority: '1',
     ttl: '10',
-    aut: 'jwt',
+    authorization: 'jwt',
     for: 'client',
     via: 'service',
-    hdr: {},
-    tmo: 10
+    headers: {},
+    timeout: 10
   }
 
   it('should instantiate a new UMFMessage object', () => {
@@ -50,20 +50,20 @@ describe('class UMFMessage', () => {
     describe('toString', () => {
       it('should JSON.stringify the UMF message object', () => {
         expect(message.toString()).toStrictEqual(
-          `{"ver":"UMF/1.4.6","mid":"${mid}","to":"service","frm":"client","ts":"${isoDate}","bdy":{}}`
+          `{"version":"UMF/1.4.6","mid":"${mid}","to":"service","from":"client","timestamp":"${isoDate}","body":{}}`
         )
       })
     })
 
     describe('toLong', () => {
-      it('should output UMFMessageLong', () => {
-        expect(message.toLong()).toStrictEqual({
+      it('should output UMFMessageShort', () => {
+        expect(message.toShort()).toStrictEqual({
           to: 'service',
-          from: 'client',
-          body: {},
-          version: 'UMF/1.4.6',
+          frm: 'client',
+          bdy: {},
+          ver: 'UMF/1.4.6',
           mid,
-          timestamp: new Date().toISOString()
+          ts: new Date().toISOString()
         })
       })
     })
@@ -76,12 +76,12 @@ describe('class UMFMessage', () => {
       message = new UMFMessage(slimMessage)
     })
 
-    describe('toShort', () => {
-      it('should output UMFMessageShort', () => {
-        expect(UMFMessage.toShort(message.toLong())).toStrictEqual({
+    describe('toLong', () => {
+      it('should output UMFMessageLong', () => {
+        expect(UMFMessage.toLong(message.toShort())).toStrictEqual({
           ...slimMessage,
-          ver: 'UMF/1.4.6',
-          ts: isoDate,
+          version: 'UMF/1.4.6',
+          timestamp: isoDate,
           mid
         })
       })
@@ -94,10 +94,10 @@ describe('class UMFMessage', () => {
         expect(UMFMessage.sign(message, 'sha1', 'secret')).toStrictEqual(
           expect.objectContaining({
             ...slimMessage,
-            ver: 'UMF/1.4.6',
-            ts: isoDate,
+            version: 'UMF/1.4.6',
+            timestamp: isoDate,
             mid,
-            sig: expect.stringMatching(/[\w\d]{40}/u)
+            signature: expect.stringMatching(/[\w\d]{40}/u)
           })
         )
       })

@@ -48,69 +48,69 @@ export interface UMFMessageLong {
 }
 
 /**
- * @extends [[UMFMessageShort]]
+ * @extends [[UMFMessageLong]]
  */
-export interface UMFMessageMinimal extends Omit<UMFMessageShort, 'mid' | 'ver' | 'ts'> {
+export interface UMFMessageMinimal extends Omit<UMFMessageLong, 'mid' | 'timestamp' | 'version'> {
   mid?: string
-  ts?: string
-  ver?: string
+  timestamp?: string
+  version?: string
 }
 
 /**
  * Creates UMF message objects
  *
  * ```typescript
- * const message = new UMFMessage({ to: 'service', frm: 'client', bdy: {} })
+ * const message = new UMFMessage({ to: 'service', from: 'client', body: {} })
  * ```
  */
-export default class UMFMessage implements UMFMessageShort {
+export default class UMFMessage implements UMFMessageLong {
   public readonly mid!: string
-  public readonly rmi?: string
+  public readonly rmid?: string
   public readonly to!: string
-  public readonly fwd?: string
-  public readonly frm!: string
-  public readonly typ?: string
-  public readonly ver = 'UMF/1.4.6'
-  public readonly pri?: string
-  public readonly ts!: string
+  public readonly forward?: string
+  public readonly from!: string
+  public readonly type?: string
+  public readonly version = 'UMF/1.4.6'
+  public readonly priority?: string
+  public readonly timestamp!: string
   public readonly ttl?: string
-  public readonly bdy!: object
-  public readonly aut?: string
+  public readonly body!: object
+  public readonly authorization?: string
   public readonly for?: string
   public readonly via?: string
-  public readonly hdr?: UMFHeaders
-  public readonly tmo?: number
-  public readonly sig?: string
+  public readonly headers?: UMFHeaders
+  public readonly timeout?: number
+  public readonly signature?: string
 
   public constructor(message: UMFMessageMinimal) {
     this.mid = message.mid ?? uuid()
     this.to = message.to as string
-    this.frm = message.frm as string
-    this.ts = message.ts ?? new Date().toISOString()
-    this.bdy = message.bdy
+    this.from = message.from as string
+    this.timestamp = message.timestamp ?? new Date().toISOString()
+    this.body = message.body
 
-    if (message.rmi) {
-      this.rmi = message.rmi
+    if (message.rmid) {
+      this.rmid = message.rmid
     }
 
-    if (message.fwd) {
-      this.fwd = message.fwd
+    if (message.forward) {
+      this.forward = message.forward
     }
 
-    if (message.typ) {
-      this.typ = message.typ
+    if (message.type) {
+      this.type = message.type
     }
 
-    if (message.pri) {
-      this.pri = message.pri
+    if (message.priority) {
+      this.priority = message.priority
     }
 
     if (message.ttl) {
       this.ttl = message.ttl
     }
 
-    if (message.aut) {
-      this.aut = message.aut
+    if (message.authorization) {
+      this.authorization = message.authorization
     }
 
     if (message.for) {
@@ -121,16 +121,16 @@ export default class UMFMessage implements UMFMessageShort {
       this.via = message.via
     }
 
-    if (message.hdr) {
-      this.hdr = message.hdr
+    if (message.headers) {
+      this.headers = message.headers
     }
 
-    if (!isNil(message.tmo)) {
-      this.tmo = message.tmo
+    if (!isNil(message.timeout)) {
+      this.timeout = message.timeout
     }
 
-    if (message.sig) {
-      this.sig = message.sig
+    if (message.signature) {
+      this.signature = message.signature
     }
   }
 
@@ -144,7 +144,7 @@ export default class UMFMessage implements UMFMessageShort {
   public static sign(message: UMFMessage, algorithm: string, secret: string): UMFMessage {
     return new UMFMessage({
       ...message,
-      sig: crypto
+      signature: crypto
         .createHmac(algorithm, secret)
         .update(this.toString())
         .digest('hex')
@@ -152,51 +152,11 @@ export default class UMFMessage implements UMFMessageShort {
   }
 
   /**
-   * Convert from [[UMFMessageLong]] back to [[UMFMessageShort]]
+   * Convert from [[UMFMessageShort]] back to [[UMFMessageLong]]
    *
    * @param message Message to convert
    */
-  public static toShort(message: Partial<UMFMessageLong>): Partial<UMFMessageShort> {
-    const {
-      rmid: rmi,
-      forward: fwd,
-      from: frm,
-      type: typ,
-      version: ver,
-      priority: pri,
-      timestamp: ts,
-      body: bdy,
-      authorization: aut,
-      headers: hdr,
-      timeout: tmo,
-      signature: sig,
-      ...rest
-    } = message as UMFMessageLong
-
-    return omitBy<UMFMessageShort>(
-      {
-        rmi,
-        fwd,
-        frm,
-        typ,
-        ver,
-        pri,
-        ts,
-        bdy,
-        aut,
-        hdr,
-        tmo,
-        sig,
-        ...rest
-      },
-      isNil
-    )
-  }
-
-  /**
-   * Returns a transformed [[UMFMessage]] with long property names
-   */
-  public toLong(): Partial<UMFMessageLong> {
+  public static toLong(message: Partial<UMFMessageShort>): Partial<UMFMessageLong> {
     const {
       rmi: rmid,
       fwd: forward,
@@ -211,7 +171,7 @@ export default class UMFMessage implements UMFMessageShort {
       tmo: timeout,
       sig: signature,
       ...rest
-    } = this
+    } = message as UMFMessageShort
 
     return omitBy<UMFMessageLong>(
       {
@@ -228,6 +188,48 @@ export default class UMFMessage implements UMFMessageShort {
         headers,
         timeout,
         signature
+      },
+      isNil
+    )
+  }
+
+  /**
+   * Returns a transformed [[UMFMessage]] with short property names
+   *
+   * @param message Message to convert
+   */
+  public toShort(): Partial<UMFMessageShort> {
+    const {
+      rmid: rmi,
+      forward: fwd,
+      from: frm,
+      type: typ,
+      version: ver,
+      priority: pri,
+      timestamp: ts,
+      body: bdy,
+      authorization: aut,
+      headers: hdr,
+      timeout: tmo,
+      signature: sig,
+      ...rest
+    } = this
+
+    return omitBy<UMFMessageShort>(
+      {
+        rmi,
+        fwd,
+        frm,
+        typ,
+        ver,
+        pri,
+        ts,
+        bdy,
+        aut,
+        hdr,
+        tmo,
+        sig,
+        ...rest
       },
       isNil
     )
