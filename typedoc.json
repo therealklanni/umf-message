@@ -1,0 +1,10 @@
+{
+  "out": "docs",
+  "entryPoint": "\"index\"",
+  "mode": "modules",
+  "excludeExternals": true,
+  "excludeNotExported": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "exclude": ["**/__{tests,mocks}__/*"]
+}

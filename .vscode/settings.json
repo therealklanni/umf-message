@@ -1,0 +1,5 @@
+{
+  "npm.packageManager": "yarn",
+  "eslint.lintTask.options": "index.ts",
+  "eslint.enable": true
+}

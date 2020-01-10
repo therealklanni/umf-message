@@ -1,0 +1,101 @@
+{
+  "name": "umf-message",
+  "version": "0.1.0",
+  "description": "UMF Message utility",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": "git@github.com:therealklanni/umf-message.git",
+  "author": "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist docs coverage .cache yarn-error.log npm-debug.log",
+    "pretest": "yarn clean",
+    "test": "jest --coverage",
+    "lint": "eslint --fix '**/*.{t,j}s'",
+    "build:docs": "typedoc",
+    "prebuild": "yarn clean; yarn build:docs",
+    "build": "webpack",
+    "prerelease": "yarn build && touch docs/.nojekyll && git add dist docs",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish"
+  },
+  "eslintConfig": {
+    "extends": "@therealklanni/eslint-config/prettier-node",
+    "overrides": [
+      {
+        "files": "**/*.ts",
+        "extends": "@therealklanni/eslint-config/typescript-prettier",
+        "parserOptions": {
+          "project": "./tsconfig.json"
+        }
+      },
+      {
+        "files": "**/__{tests,mocks}__/*.ts",
+        "plugins": [
+          "jest"
+        ],
+        "env": {
+          "jest/globals": true
+        },
+        "extends": [
+          "@therealklanni/eslint-config/jest"
+        ]
+      }
+    ]
+  },
+  "eslintIgnore": [
+    "dist",
+    "docs",
+    "node_modules"
+  ],
+  "prettier": "@therealklanni/prettier-config",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn pretty-quick --staged --verbose --pattern '**/*.{json,md,y{a,}ml}' && lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@therealklanni/commitlint-config": "^0.1.0",
+    "@therealklanni/eslint-config": "^0.1.13",
+    "@therealklanni/prettier-config": "^0.1.0",
+    "@types/jest": "^24.0.25",
+    "@types/lodash": "^4.14.149",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.0.1",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "mockdate": "^2.0.5",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "standard-version": "^7.0.1",
+    "ts-jest": "^24.3.0",
+    "ts-loader": "^6.2.1",
+    "typedoc": "^0.15.6",
+    "typedoc-plugin-external-module-name": "^2.1.0",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@types/uuid": "^3.4.6",
+    "lodash": "^4.17.15",
+    "uuid": "^3.3.3"
+  }
+}
