@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>UMFMessage | umf-message - v0.1.4</title>
+	<title>UMFMessage | umf-message - v0.1.5</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">umf-message - v0.1.4</a>
+					<a href="../index.html" class="title">umf-message - v0.1.5</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -67,7 +67,7 @@
 					<div class="lead">
 						<p>Creates UMF message objects</p>
 					</div>
-					<pre><code class="language-typescript"><span class="hljs-keyword">const</span> message = <span class="hljs-keyword">new</span> UMFMessage({ to: <span class="hljs-string">'service'</span>, frm: <span class="hljs-string">'client'</span>, bdy: {} })</code></pre>
+					<pre><code class="language-typescript"><span class="hljs-keyword">const</span> message = <span class="hljs-keyword">new</span> UMFMessage({ to: <span class="hljs-string">'service'</span>, <span class="hljs-keyword">from</span>: <span class="hljs-string">'client'</span>, body: {} })</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -81,7 +81,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a></li>
+					<li><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -97,32 +97,32 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#aut" class="tsd-kind-icon">aut</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#bdy" class="tsd-kind-icon">bdy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#authorization" class="tsd-kind-icon">authorization</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#body" class="tsd-kind-icon">body</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#for" class="tsd-kind-icon">for</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#frm" class="tsd-kind-icon">frm</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#fwd" class="tsd-kind-icon">fwd</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#hdr" class="tsd-kind-icon">hdr</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#forward" class="tsd-kind-icon">forward</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#from" class="tsd-kind-icon">from</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#headers" class="tsd-kind-icon">headers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#mid" class="tsd-kind-icon">mid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#pri" class="tsd-kind-icon">pri</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#rmi" class="tsd-kind-icon">rmi</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#sig" class="tsd-kind-icon">sig</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#tmo" class="tsd-kind-icon">tmo</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#priority" class="tsd-kind-icon">priority</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#rmid" class="tsd-kind-icon">rmid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#signature" class="tsd-kind-icon">signature</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#timeout" class="tsd-kind-icon">timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#to" class="tsd-kind-icon">to</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#ts" class="tsd-kind-icon">ts</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#ttl" class="tsd-kind-icon">ttl</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#typ" class="tsd-kind-icon">typ</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#ver" class="tsd-kind-icon">ver</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#version" class="tsd-kind-icon">version</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_index_.umfmessage.html#via" class="tsd-kind-icon">via</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.umfmessage.html#tolong" class="tsd-kind-icon">to<wbr>Long</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.umfmessage.html#toshort" class="tsd-kind-icon">to<wbr>Short</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_index_.umfmessage.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_index_.umfmessage.html#sign" class="tsd-kind-icon">sign</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_index_.umfmessage.html#toshort" class="tsd-kind-icon">to<wbr>Short</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_index_.umfmessage.html#tolong" class="tsd-kind-icon">to<wbr>Long</a></li>
 							</ul>
 						</section>
 					</div>
@@ -140,7 +140,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L83">index.ts:83</a></li>
+									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L83">index.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -157,24 +157,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="aut" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> aut</h3>
-					<div class="tsd-signature tsd-kind-icon">aut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="authorization" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> authorization</h3>
+					<div class="tsd-signature tsd-kind-icon">authorization<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#aut">aut</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#authorization">authorization</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L78">index.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L78">index.ts:78</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="bdy" class="tsd-anchor"></a>
-					<h3>bdy</h3>
-					<div class="tsd-signature tsd-kind-icon">bdy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="body" class="tsd-anchor"></a>
+					<h3>body</h3>
+					<div class="tsd-signature tsd-kind-icon">body<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#bdy">bdy</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#body">body</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L77">index.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L77">index.ts:77</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,42 +183,42 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> for</h3>
 					<div class="tsd-signature tsd-kind-icon">for<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#for">for</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#for">for</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L79">index.ts:79</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L79">index.ts:79</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="frm" class="tsd-anchor"></a>
-					<h3>frm</h3>
-					<div class="tsd-signature tsd-kind-icon">frm<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="forward" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> forward</h3>
+					<div class="tsd-signature tsd-kind-icon">forward<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#frm">frm</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#forward">forward</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L71">index.ts:71</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L70">index.ts:70</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fwd" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fwd</h3>
-					<div class="tsd-signature tsd-kind-icon">fwd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="from" class="tsd-anchor"></a>
+					<h3>from</h3>
+					<div class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#fwd">fwd</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#from">from</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L70">index.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L71">index.ts:71</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="hdr" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hdr</h3>
-					<div class="tsd-signature tsd-kind-icon">hdr<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_index_.umfheaders.html" class="tsd-signature-type">UMFHeaders</a></div>
+					<a name="headers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> headers</h3>
+					<div class="tsd-signature tsd-kind-icon">headers<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_index_.umfheaders.html" class="tsd-signature-type">UMFHeaders</a></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#hdr">hdr</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#headers">headers</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L81">index.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L81">index.ts:81</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -227,53 +227,64 @@
 					<h3>mid</h3>
 					<div class="tsd-signature tsd-kind-icon">mid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#mid">mid</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#mid">mid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L67">index.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L67">index.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="pri" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pri</h3>
-					<div class="tsd-signature tsd-kind-icon">pri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="priority" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> priority</h3>
+					<div class="tsd-signature tsd-kind-icon">priority<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#pri">pri</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#priority">priority</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L74">index.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L74">index.ts:74</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="rmi" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> rmi</h3>
-					<div class="tsd-signature tsd-kind-icon">rmi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="rmid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> rmid</h3>
+					<div class="tsd-signature tsd-kind-icon">rmid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#rmi">rmi</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#rmid">rmid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L68">index.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L68">index.ts:68</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="sig" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sig</h3>
-					<div class="tsd-signature tsd-kind-icon">sig<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="signature" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> signature</h3>
+					<div class="tsd-signature tsd-kind-icon">signature<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#sig">sig</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#signature">signature</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L83">index.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L83">index.ts:83</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tmo" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> tmo</h3>
-					<div class="tsd-signature tsd-kind-icon">tmo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#tmo">tmo</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#timeout">timeout</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L82">index.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L82">index.ts:82</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="timestamp" class="tsd-anchor"></a>
+					<h3>timestamp</h3>
+					<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#timestamp">timestamp</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L75">index.ts:75</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -282,20 +293,9 @@
 					<h3>to</h3>
 					<div class="tsd-signature tsd-kind-icon">to<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#to">to</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#to">to</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L69">index.ts:69</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ts" class="tsd-anchor"></a>
-					<h3>ts</h3>
-					<div class="tsd-signature tsd-kind-icon">ts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#ts">ts</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L75">index.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L69">index.ts:69</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -304,31 +304,31 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ttl</h3>
 					<div class="tsd-signature tsd-kind-icon">ttl<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#ttl">ttl</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#ttl">ttl</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L76">index.ts:76</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L76">index.ts:76</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="typ" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> typ</h3>
-					<div class="tsd-signature tsd-kind-icon">typ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#typ">typ</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#type">type</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L72">index.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L72">index.ts:72</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="ver" class="tsd-anchor"></a>
-					<h3>ver</h3>
-					<div class="tsd-signature tsd-kind-icon">ver<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"UMF/1.4.6"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;UMF/1.4.6&quot;</span></div>
+					<a name="version" class="tsd-anchor"></a>
+					<h3>version</h3>
+					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"UMF/1.4.6"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;UMF/1.4.6&quot;</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#ver">ver</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#version">version</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L73">index.ts:73</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L73">index.ts:73</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -337,9 +337,9 @@
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> via</h3>
 					<div class="tsd-signature tsd-kind-icon">via<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a>.<a href="../interfaces/_index_.umfmessageshort.html#via">via</a></p>
+						<p>Implementation of <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a>.<a href="../interfaces/_index_.umfmessagelong.html#via">via</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L80">index.ts:80</a></li>
+							<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L80">index.ts:80</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -347,24 +347,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="tolong" class="tsd-anchor"></a>
-					<h3>to<wbr>Long</h3>
+					<a name="toshort" class="tsd-anchor"></a>
+					<h3>to<wbr>Short</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Long<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Short<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L199">index.ts:199</a></li>
+									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L201">index.ts:201</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a transformed <a href="_index_.umfmessage.html">UMFMessage</a> with long property names</p>
+									<p>Returns a transformed <a href="_index_.umfmessage.html">UMFMessage</a> with short property names</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -378,7 +378,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L239">index.ts:239</a></li>
+									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L241">index.ts:241</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -398,7 +398,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L144">index.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L144">index.ts:144</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -432,33 +432,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="toshort" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Short</h3>
+					<a name="tolong" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> to<wbr>Long</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Short<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Long<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/37d00bb/index.ts#L159">index.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/therealklanni/umf-message/blob/b350501/index.ts#L159">index.ts:159</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Convert from <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a> back to <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a></p>
+									<p>Convert from <a href="../interfaces/_index_.umfmessageshort.html">UMFMessageShort</a> back to <a href="../interfaces/_index_.umfmessagelong.html">UMFMessageLong</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>message: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>message: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Message to convert</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessageshort.html" class="tsd-signature-type">UMFMessageShort</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_index_.umfmessagelong.html" class="tsd-signature-type">UMFMessageLong</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -483,58 +483,58 @@
 								<a href="_index_.umfmessage.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#aut" class="tsd-kind-icon">aut</a>
+								<a href="_index_.umfmessage.html#authorization" class="tsd-kind-icon">authorization</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#bdy" class="tsd-kind-icon">bdy</a>
+								<a href="_index_.umfmessage.html#body" class="tsd-kind-icon">body</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#for" class="tsd-kind-icon">for</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#frm" class="tsd-kind-icon">frm</a>
+								<a href="_index_.umfmessage.html#forward" class="tsd-kind-icon">forward</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#fwd" class="tsd-kind-icon">fwd</a>
+								<a href="_index_.umfmessage.html#from" class="tsd-kind-icon">from</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#hdr" class="tsd-kind-icon">hdr</a>
+								<a href="_index_.umfmessage.html#headers" class="tsd-kind-icon">headers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#mid" class="tsd-kind-icon">mid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#pri" class="tsd-kind-icon">pri</a>
+								<a href="_index_.umfmessage.html#priority" class="tsd-kind-icon">priority</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#rmi" class="tsd-kind-icon">rmi</a>
+								<a href="_index_.umfmessage.html#rmid" class="tsd-kind-icon">rmid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#sig" class="tsd-kind-icon">sig</a>
+								<a href="_index_.umfmessage.html#signature" class="tsd-kind-icon">signature</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#tmo" class="tsd-kind-icon">tmo</a>
+								<a href="_index_.umfmessage.html#timeout" class="tsd-kind-icon">timeout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_index_.umfmessage.html#timestamp" class="tsd-kind-icon">timestamp</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#to" class="tsd-kind-icon">to</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#ts" class="tsd-kind-icon">ts</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#ttl" class="tsd-kind-icon">ttl</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#typ" class="tsd-kind-icon">typ</a>
+								<a href="_index_.umfmessage.html#type" class="tsd-kind-icon">type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#ver" class="tsd-kind-icon">ver</a>
+								<a href="_index_.umfmessage.html#version" class="tsd-kind-icon">version</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#via" class="tsd-kind-icon">via</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_index_.umfmessage.html#tolong" class="tsd-kind-icon">to<wbr>Long</a>
+								<a href="_index_.umfmessage.html#toshort" class="tsd-kind-icon">to<wbr>Short</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_index_.umfmessage.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
@@ -543,7 +543,7 @@
 								<a href="_index_.umfmessage.html#sign" class="tsd-kind-icon">sign</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_index_.umfmessage.html#toshort" class="tsd-kind-icon">to<wbr>Short</a>
+								<a href="_index_.umfmessage.html#tolong" class="tsd-kind-icon">to<wbr>Long</a>
 							</li>
 						</ul>
 					</li>
