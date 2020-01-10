@@ -8,14 +8,13 @@
   "author": "Kevin Lanni <therealklanni@gmail.com> (https://github.com/therealklanni)",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist docs coverage .cache yarn-error.log npm-debug.log",
-    "pretest": "yarn clean",
+    "clean": "rm -rf dist coverage .cache yarn-error.log npm-debug.log",
     "test": "jest --coverage",
     "lint": "eslint --fix '**/*.{t,j}s'",
     "build:docs": "typedoc",
-    "prebuild": "yarn clean; yarn build:docs",
+    "prebuild": "yarn build:docs",
     "build": "webpack",
-    "prerelease": "yarn build && touch docs/.nojekyll && git add docs",
+    "prerelease": "yarn clean && yarn test && yarn build && git add docs",
     "release": "standard-version -a",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
@@ -71,6 +70,7 @@
     "@therealklanni/prettier-config": "^0.1.0",
     "@types/jest": "^24.0.25",
     "@types/lodash": "^4.14.149",
+    "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
     "eslint": "^6.8.0",
@@ -94,7 +94,6 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "@types/uuid": "^3.4.6",
     "lodash": "^4.17.15",
     "uuid": "^3.3.3"
   }
