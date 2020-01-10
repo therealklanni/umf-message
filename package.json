@@ -15,8 +15,8 @@
     "build:docs": "typedoc",
     "prebuild": "yarn clean; yarn build:docs",
     "build": "webpack",
-    "prerelease": "yarn build && touch docs/.nojekyll && git add dist docs",
-    "release": "standard-version",
+    "prerelease": "yarn build && touch docs/.nojekyll && git add docs",
+    "release": "standard-version -a",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "eslintConfig": {

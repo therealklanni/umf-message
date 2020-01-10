@@ -1,0 +1,13 @@
+docs/
+.vscode/
+coverage/
+.cache/
+*/__tests__/
+.editorconfig
+.nvmrc
+jest.config.js
+tsconfig.json
+typedoc.json
+webpack.config.js
+commitlint.config.js
+index.ts

@@ -8,3 +8,4 @@ coverage/
 !.vscode/launch.json
 !.vscode/extensions.json
 .cache/
+dist/
