@@ -1,6 +1,6 @@
 {
   "name": "umf-message",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "UMF Message utility",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,7 @@
     "clean": "rm -rf dist coverage .cache yarn-error.log npm-debug.log",
     "test": "jest --coverage",
     "lint": "eslint --fix '**/*.{t,j}s'",
-    "build:docs": "typedoc",
+    "build:docs": "#typedoc",
     "postbuild:docs": "touch docs/.nojekyll",
     "prebuild": "yarn clean",
     "build": "webpack",
