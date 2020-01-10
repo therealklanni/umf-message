@@ -9,14 +9,13 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist coverage .cache yarn-error.log npm-debug.log",
-    "pretest": "yarn clean",
     "test": "jest --coverage",
     "lint": "eslint --fix '**/*.{t,j}s'",
     "build:docs": "typedoc",
     "postbuild:docs": "touch docs/.nojekyll",
-    "prebuild": "yarn clean && yarn build:docs",
+    "prebuild": "yarn clean",
     "build": "webpack",
-    "prerelease": "yarn build && git add docs",
+    "prerelease": "yarn build && yarn build:docs && git add docs",
     "release": "standard-version -a",
     "postrelease": "git push --no-verify --follow-tags origin master && npm publish"
   },
@@ -27,7 +26,7 @@
         "files": "**/*.ts",
         "extends": "@therealklanni/eslint-config/typescript-prettier",
         "parserOptions": {
-          "project": "./tsconfig.json"
+          "project": "./tsconfig.lint.json"
         }
       },
       {

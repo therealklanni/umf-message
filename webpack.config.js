@@ -4,6 +4,7 @@ const maxSize = 500000
 module.exports = {
   entry: './index.ts',
   mode: 'production',
+  target: 'node',
   performance: {
     maxAssetSize: maxSize,
     maxEntrypointSize: maxSize
@@ -22,6 +23,7 @@ module.exports = {
   },
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'commonjs2'
   }
 }

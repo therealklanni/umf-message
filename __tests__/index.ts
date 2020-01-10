@@ -2,7 +2,7 @@
 import mockDate from 'mockdate'
 import uuid from 'uuid/v4'
 
-import UMFMessage, { UMFMessageMinimal, UMFMessageLong } from '../'
+import UMFMessage, { UMFMessageMinimal, UMFMessageLong } from '../index'
 
 jest.mock('uuid/v4', () => jest.fn(() => '2335eac5-a27e-447e-baca-1050a7e726af'))
 
